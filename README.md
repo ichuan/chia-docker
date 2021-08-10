@@ -8,7 +8,7 @@ Just a wrapper of [official docker image](https://github.com/Chia-Network/chia-d
 ## First time running: generate and keep keys secured
 
 ```
-docker run --rm -it mixhq/chia
+docker run --rm -it wshub/chia
 ```
 
 
@@ -17,7 +17,7 @@ docker run --rm -it mixhq/chia
 ```
 mkdir data
 # plain keys saved to chia-keys
-docker run --restart always -itd --name xch -v $PWD/data:/root/.chia -v $PWD/chia-keys:/chia-keys -e keys=/chia-keys -p 9256:9256 -p 8555:8555 mixhq/chia
+docker run --restart always -itd --name xch -v $PWD/data:/root/.chia -v $PWD/chia-keys:/chia-keys -e keys=/chia-keys -p 9256:9256 -p 8555:8555 wshub/chia
 ```
 
 When wallet started, create a wallet for RPC (ID: 1). Will be prompted to create, otherwise just ignore.
